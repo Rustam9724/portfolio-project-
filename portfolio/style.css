@@ -1,0 +1,687 @@
+body {
+    background-color: black;
+}
+
+body.light-theme {
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-gold: #bdae82;
+    --font1: 60px;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-Regular.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url("assets/fonts/Merriweather-Regular.ttf");
+}
+
+ul, p, h1, h2, h3, h4, button, input, body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: black;
+    overflow: hidden;
+}
+
+.container.light-theme {
+    background: white;
+}
+
+header {
+    height: 90px;
+}
+
+    .header-container {
+        background: url("assets/images/bg.png") no-repeat center 0;
+        display: flex;
+        height: 90px;
+    }
+
+    .header-container.light-theme {
+        background: url('assets/images/bg_white-theme.jpg') no-repeat center 0;
+    }
+
+        #logo {
+            width: 50px;
+            height: 50px;
+            background: url("assets/svg/logo.svg");
+            margin-top: 10px;
+        }
+
+        #logo.light-theme {
+            background: url("assets/svg/Vector.svg");
+            background-repeat: no-repeat;
+        }
+
+        #logo:hover {
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+            contrast(87%);
+        }
+
+        #language {
+            font: 700 20px/50px Inter;
+            color: white;
+            display: flex;
+            margin-top: 10px;
+            margin-right: 35px;
+        }
+
+        #language.light-theme {
+            color: black;
+        }
+
+            #language input:checked + label {
+                color: var(--color-gold);
+                transition: 0.45s;
+            }
+
+            #language.light-theme input:checked + label {
+                color: white;
+            }
+
+            #language p {
+                margin-left: 9px;
+                margin-right: 8px;
+            }
+
+        nav {
+            margin-left: auto;
+            margin-right: 22px;
+            margin-top: 10px;
+        }
+
+            nav li {
+                display: inline;
+            }
+
+            nav li:not(:first-child) {
+                margin-left: 30px;
+            }
+
+                .nav-links {
+                    color: white;
+                    font: 400 20px/50px Inter;
+                    text-decoration: none;
+                }
+
+                .nav-links.light-theme {
+                    color: black;
+                }
+
+                .nav-links.light-theme:hover {
+                    color: white;
+                }
+
+                nav li a:hover {
+                    color: var(--color-gold);
+                    transition: 0.45s;
+                }
+
+                #theme-icon {
+                    width: 45px;
+                    height: 45px;
+                    background: url("assets/svg/carbon_sun.svg");
+                    margin-top: 16px;
+                }
+
+                #theme-icon.light-theme {
+                    background: url('assets/svg/moon.svg') no-repeat;
+                }
+
+                #theme-icon.light-theme:hover {
+                    background: url("assets/svg/theme_icon_hover.svg") no-repeat;
+                }
+
+#hero { 
+    background-image: url('assets/images/bg.png');
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    height: 820px;
+    overflow: hidden;
+}
+
+#hero.light-theme {
+    background-image: url('assets/images/bg_white-theme.jpg');
+}
+
+#hero .container {
+    background: none;
+}
+
+
+    #hero h1 {
+        font: 700 60px/120px Merriweather;
+        color: white;
+        margin: 150px 0 10px 60px;
+    }
+
+    #hero h1.light-theme {
+        color: black;
+    }
+
+    #hero p {
+        font: 400 20px/40px Inter;
+        width: 470px;
+        color: white;
+        margin: 0 0 25px 60px;
+    }
+
+    #hero p.light-theme {
+        color: black;
+    }
+
+    #hero button {
+        background: var(--color-gold);
+        width: 220px;
+        height: 55px;
+        font: 400 20px/40px Inter;
+        margin-left: 60px;
+    }
+
+    #hero button.light-theme {
+        background: white;
+    }
+
+    #hero button:hover {
+        background-color: black;
+        color: var(--color-gold);
+        transition: 0.45s;
+    }
+
+    .section-titlles {
+        margin: 0 auto;
+        width: 50%;
+        background: linear-gradient(to top, black 39px, var(--color-gold) 39px, var(--color-gold) 41px, black 41px);
+        margin-bottom: 60px;
+        margin-top: 100px;
+        overflow: hidden;
+    }
+
+    .section-titlles.light-theme {
+        background: linear-gradient(to top, white 39px, black 39px, black 41px, white 41px);
+    }
+    
+        .section-titlles h2 {
+            font: 700 40px/80px Merriweather;
+            color: var(--color-gold);
+            background: black;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-titlles h2.light-theme {
+            background: white;
+            color: black;
+        }
+    
+    #skills .container {
+        height: 482px;
+    }
+
+    #skills .container.light-theme {
+        background: white;
+    }
+
+    
+        #skills .section-titlles h2 {
+            width: 152px;
+            margin-top: -7px
+        }
+    
+        #skill-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            column-gap: 80px;
+            color: white;
+        }
+
+        #skill-items.light-theme {
+            color: black;
+        }
+    
+            .skill-item {
+                width: 280px;
+                text-align: center;
+                height: 232px;
+            }
+    
+            .skill-item:nth-child(1) {
+                background: url("assets/svg/camera\ 1.svg") center top no-repeat;
+            }
+    
+                .skill-item h4 {
+                    font: 700 20px/40px Inter;
+                    margin-top: 100px;
+                    margin-bottom: 20px;
+                }
+    
+                .skill-item p {
+                    font: 400 18px/36px Inter;
+                }
+    
+            .skill-item:nth-child(2) {
+                background: url("assets/svg/video\ 1.svg") center top no-repeat;
+            }
+    
+            .skill-item:nth-child(3) {
+                background: url("assets/svg/image\ 1.svg") center top no-repeat;
+            }
+    
+            .skill-item:nth-child(4) {
+                background: url("assets/svg/mic\ 1.svg") center top no-repeat;
+        }
+    
+#portfolio .container {
+    height: 1500px;
+}
+
+#portfolio .container.light-theme {
+    background: white;
+}
+        
+        #portfolio .section-titlles h2 {
+            width: 221px;
+        }
+
+        #portfolio .section-titlles.light-theme {
+            background: linear-gradient(to top, white 39px, black 39px, black 41px, white 41px);
+        }
+
+        #portfolio .section-titlles h2.light-theme {
+            background: white;
+        }
+
+        #seasons {
+            width: 895px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        } 
+        
+            #seasons button {
+                width: 220px;
+                height: 55px;
+                background: black;
+                border: 2px solid var(--color-gold);
+                color: var(--color-gold);
+                font: 400 20px/40px Inter;
+                cursor: pointer;
+            }
+
+            #winter-button.light-theme {
+                background: var(--color-gold);
+                color: black;
+            }
+
+            #spring-button.light-theme {
+                background: var(--color-gold);
+                color: black;
+            }
+
+            #summer-button.light-theme {
+                background: var(--color-gold);
+                color: black;
+            }
+
+            #autumn-button.light-theme {
+                background: var(--color-gold);
+                color: black;
+            }
+
+            #winter-button.light-theme:hover {
+                background-color: black;
+                color: var(--color-gold);
+            }
+
+            #spring-button.light-theme:hover {
+                background-color: black;
+                color: var(--color-gold);
+            }
+
+            #summer-button.light-theme:hover {
+                background-color: black;
+                color: var(--color-gold);
+            }
+
+            #autumn-button.light-theme:hover {
+                background-color: black;
+                color: var(--color-gold);
+            }
+        
+            #seasons button:hover {
+                background: var(--color-gold);
+                color: black;
+                transition: 1s;
+            }
+
+            #portfolio-images {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+
+#video .section-titlles h2 {
+    width: 156px;
+}
+            
+#video .container {
+    height: 945px;
+}
+
+#video .container.light-theme {
+    background: white;
+}
+
+#video .section-titlles.light-theme {
+    background: linear-gradient(to top, white 39px, black 39px, black 41px, white 41px);
+}
+
+#video .section-titlles h2.light-theme {
+    background: white;
+    color: black;
+}
+            
+    #video-section {
+        position: relative;
+    }
+            
+        #playbutton + label {
+            position: absolute;
+            right: 634.14px;
+            top: 288px;
+        }
+            
+        #playbutton + label:hover {
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+            transition: 0.45s;
+        }
+      
+#pricesection .container {
+    height: 845px;
+}
+
+#pricesection .container.light-theme {
+    background: white;
+}
+
+    #prisection .section-titlles.light-theme {
+        background: linear-gradient(to top, white 39px, black 39px, black 41px, white 41px);
+    }
+
+    #pricesection .section-titlles h2.light-theme {
+        background: white;
+        color: black;
+    }
+        
+    #pricesection h2 {
+        width: 142px;
+    }
+        
+    #pricecontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+        
+        .pricecards {
+            width: 450px;
+            height: 505px;
+            border: 3px solid var(--color-gold);
+            text-align: center;
+            color: white;
+            padding-top: 43px;
+            box-sizing: border-box;
+        }
+
+        .pricecards:nth-child(1).light-theme {
+            color: black;
+        }
+
+        .pricecards:nth-child(2).light-theme {
+            color: black;
+        }
+
+        .pricecards:nth-child(3).light-theme {
+            color: black;
+        }
+        
+            .pricecards h3 {
+                font: 700 28px/56px Merriweather;
+                margin-bottom: 20px;
+            }
+        
+            .pricecards .prices {
+                display: block;
+                font: 700 24px/48px Merriweather;
+                margin-bottom: 20px;
+            }
+        
+            .pricecards span {
+                font: 400 18px/36px Inter;
+                display: block;
+            }
+        
+            .pricecards button {
+                width: 220px;
+                height: 55px;
+                background-color: var(--color-gold);
+                font: 400 20px/40px Inter;
+                margin-top: 40px;
+                cursor: pointer;
+            }
+
+            .pricecards button:hover {
+                background-color: white;
+                transition: 0.55s;
+            }
+    
+#contacts .container {
+    height: 700px;
+    background: url("assets/images/contacts.jpg");
+    background-size: auto 700px;
+    background-position: center center;
+}
+
+#contacts .container.light-theme {
+    background-image: url("assets/images/contacts_light_theme.jpg");
+}
+            
+    #contacts .section-titlles {
+        background: none;
+        margin: 60px 40px 40px 950px;
+        text-align: left;
+    }
+            
+        #contacts .section-titlles h2 {
+            width: 452px;
+            background: none;
+            margin: 0;
+            text-align: left;
+        }
+            
+        #contacts input {
+            display: block;
+            border: 2px solid var(--color-gold);
+            width: 450px;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 5px 20px;
+            background-color: rgba(33%, 33%, 34%, 0);
+            margin: 0 0 20px 950px;
+            font: 400 20px/40px Inter;
+            color: var(--color-gold);
+        }
+        
+        #email.light-theme {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        #phone.light-theme {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        textarea.light-theme {
+            background: rgba(255, 255, 255, 0.5)
+        }
+
+        #contacts input::placeholder {
+            font: 400 20px/40px Inter;
+            color: var(--color-gold);
+        }
+            
+        textarea {
+            width: 450px;
+            height: 100px;
+            resize: none;
+            margin-left: 950px;
+            background:rgba(33%, 33%, 34%, 0);
+            font: 400 20px/40px Inter;
+            color: var(--color-gold);
+            box-sizing: border-box;
+            padding: 5px 20px;
+            border: 2px solid var(--color-gold);
+            display: block;
+            margin-bottom: 30px;
+        }
+            
+        textarea::placeholder {
+            font: 400 20px/40px Inter;
+            color: var(--color-gold);
+            display: block;
+        }
+            
+        #contacts button {
+            width: 220px;
+            height: 55px;
+            background: var(--color-gold);
+            font: 400 20px/40px Inter;
+            margin-left: 950px;
+            display: block;
+        }
+
+        #contacts button.light-theme {
+            background: white;
+        }
+
+        #contacts button.light-theme:hover {
+            background: var(--color-gold);
+        }
+
+        #contacts button:hover {
+            background-color: white;
+            transition: 0.55s;
+        }
+
+footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font: 400 20px/50px Inter;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer a:nth-child(1).light-theme {
+        color: black;
+    }
+
+    footer a:nth-child(2).light-theme {
+        color: black;
+    }
+
+    footer a:hover {
+        color: var(--color-gold);
+        transition: 0.45s;
+    }
+
+    #social-list {
+        margin-right: 40px;
+    }
+
+        #social-list li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        #social-list li:not(:last-child) {
+            margin-right: 10px;
+        }
+
+            #social-list li a {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+            }
+
+            #social-list li a:hover {
+                filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+                transition: 0.5s;
+            }
+
+            #inst {
+                background: url("assets/svg/inst\ 1.svg");
+            }
+
+            #fb {
+                background: url("assets/svg/fb\ 1.svg");
+            }
+
+            #tw {
+                background: url("assets/svg/tw\ 1.svg");
+            }
+
+            #pint {
+                background: url("assets/svg/pinterest\ 1.svg");
+            }
+
+            #inst.light-theme {
+                background: url('assets/svg/inst_light_theme.png');
+            }
+
+            #fb.light-theme {
+                background: url('assets/svg/fb_light_theme.png');
+            }
+
+            #tw.light-theme {
+                background: url("assets/svg/tw_light_theme.png");
+            }
+
+            #pint.light-theme {
+                background: url("assets/svg/pint_light_theme.png");
+            }
+
+#seasons button.active {
+    background: var(--color-gold);
+    color: black;
+}
+
+#seasons button.light-theme.active {
+    background: black;
+    color: var(--color-gold);
+}
